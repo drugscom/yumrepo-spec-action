@@ -1,0 +1,40 @@
+name: 'Yum repo spec generator'
+description: 'Generate RPM spec for an Yum repo'
+inputs:
+  name:
+    description: 'Repo name'
+    required: true
+  summary:
+    description: 'Summary'
+    required: true
+  url:
+    description: 'Information URL'
+    required: true
+  packager:
+    description: 'Packager'
+    required: true
+  version:
+    description: 'Package version'
+    required: false
+    default: '7'
+  release:
+    description: 'Package release version'
+    required: false
+    default: '1'
+  requires:
+    description: 'Package requirements'
+    required: false
+    default: 'redhat-release >= 7'
+  description:
+    description: 'Long description'
+    required: false
+  baseurl:
+    description: 'Repo base URL'
+    required: true
+  gpg-key:
+    description: 'GPG signing key'
+    required: false
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

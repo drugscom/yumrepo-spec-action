@@ -1,0 +1,40 @@
+{
+  "name": "yumrepo-spec-action",
+  "version": "1.0.0",
+  "description": "Generate RPM spec for an Yum repo",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "scripts": {
+    "build": "tsc && ncc build --transpile-only",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://asenci@github.com/drugscom/yumrepo-spec-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "rpm",
+    "matrix"
+  ],
+  "author": "Drugs.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/drugscom/yumrepo-spec-action/issues"
+  },
+  "homepage": "https://github.com/drugscom/yumrepo-spec-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/utils": "git+https://github.com/drugscom/actions-utils.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/parser": "^4.21.0",
+    "@vercel/ncc": "^0.28.2",
+    "eslint": "^7.23.0",
+    "eslint-plugin-github": "^4.1.3",
+    "typescript": "^4.2.4"
+  }
+}
