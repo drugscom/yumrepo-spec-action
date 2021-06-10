@@ -4,16 +4,16 @@ import * as utils from '@actions/utils'
 
 function run(): void {
   try {
-    const baseURL = utils.getInputAsString('baseurl')
-    const description = utils.getInputAsString('description')
-    const GPGKey = utils.getInputAsString('gpg-key')
-    const name = utils.getInputAsString('name')
-    const packager = utils.getInputAsString('packager')
-    const release = utils.getInputAsString('release')
-    const requires = utils.getInputAsString('requires')
-    const summary = utils.getInputAsString('summary')
-    const URL = utils.getInputAsString('url')
-    const version = utils.getInputAsString('version')
+    const baseURL = core.getInput('baseurl')
+    const description = core.getInput('description')
+    const GPGKey = core.getInput('gpg-key')
+    const name = core.getInput('name')
+    const packager = core.getInput('packager')
+    const release = core.getInput('release')
+    const requires = core.getInput('requires')
+    const summary = core.getInput('summary')
+    const URL = core.getInput('url')
+    const version = core.getInput('version')
 
     if (utils.pathExists(`${name}-release`)) {
       core.setFailed(`Path already exists: ${name}-release`)
