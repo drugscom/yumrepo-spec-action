@@ -1,6 +1,6 @@
 {
   "name": "yumrepo-spec-action",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate RPM spec for an Yum repo",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
