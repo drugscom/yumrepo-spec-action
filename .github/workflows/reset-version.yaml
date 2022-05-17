@@ -1,0 +1,14 @@
+---
+name: Node.js
+
+'on':
+  pull_request:
+    types: [unlabeled]
+
+permissions:
+  contents: write
+
+jobs:
+  reset-version:
+    name: Reset package version
+    uses: drugscom/shared-workflows/.github/workflows/node-reset-version.yml@v1

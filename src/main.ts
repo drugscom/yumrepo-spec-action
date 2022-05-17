@@ -77,6 +77,8 @@ function run(): void {
     spec.write('%config(noreplace) /etc/yum.repos.d/*\n')
     spec.write('\n')
   } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     core.setFailed(error.message)
   }
 }

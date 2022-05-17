@@ -1,0 +1,24 @@
+---
+name: CD
+
+'on':
+  push:
+    branches: [master]
+    tags: [v*]
+  workflow_dispatch:
+
+concurrency:
+  group: CD-new-release/${{ github.repo }}/${{ github.ref }}
+
+permissions:
+  contents: write
+
+jobs:
+  new-release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create new release
+        uses: drugscom/release-action@v1
+        with:
+          update-major-tag: true
